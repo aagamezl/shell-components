@@ -26,10 +26,4 @@ echo -e "${YELLOW}Cloning Shell Components...${NC}"
 rm -rf "$INSTALL_DIR"
 git clone https://github.com/aagamezl/shell-components.git "$INSTALL_DIR" >/dev/null
 
-if [[ $SHELL_COMPONENTS_REF != "master" ]]; then
-	cd "$INSTALL_DIR"
-	git fetch origin "${SHELL_COMPONENTS_REF:-stable}" && git checkout "${SHELL_COMPONENTS_REF:-stable}"
-	cd -
-fi
-
 echo -e "${GREEN}Installation completed.${NC}"
