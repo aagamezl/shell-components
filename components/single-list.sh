@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Function to display the options and return selected options
-show_menu() {
+single_list() {
   # Save terminal settings
   local old_stty=$(stty -g)
   stty -icanon -echo min 1 time 0
@@ -53,8 +53,6 @@ show_menu() {
 
   echo "${selected[@]}"
 }
-
-Update the READ.md file
 
 if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
   if [[ $# -gt 0 ]]; then
